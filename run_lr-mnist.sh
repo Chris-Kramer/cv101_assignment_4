@@ -25,7 +25,7 @@ echo "Upgrading pip and installing dependencies"
 python -m pip install --upgrade pip
 
 # Test if requirements exist and install it
-test -f requirements.txt && pip install -r requirements.txt
+test -f requirements.txt && python -m pip install -r requirements.txt
 
 #navigate to src folder
 cd src
