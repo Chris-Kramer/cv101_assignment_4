@@ -4,16 +4,27 @@ echo "Creating environment"
 #Environment name
 VENVNAME=as4-cmk
 
-python3 -m venv $VENVNAME
+#Create venv 
+python -m venv $VENVNAME
 
-#Activate environment
-source $VENVNAME/bin/activate
+# This makes sure that the bash script can be run from bash emulator on windows 
+# Test if the folder bin in venvname exists
+if [[ -f "/$VENVNAME/bin" ]]
+
+    then
+        source $VENVNAME/bin/activate
+    
+    else
+        source $VENVNAME/Scripts/activate
+fi
+
 
 echo "Upgrading pip and installing dependencies"
 #Upgrade pip
-pip install --upgrade pip
+# I'm using python first, since my pc have problems upgrading pip locally if I don't do it.
+python -m pip install --upgrade pip
 
-# problems when installing from requirements.txt
+# Test if requirements exist and install it
 test -f requirements.txt && pip install -r requirements.txt
 
 #navigate to src folder
@@ -21,7 +32,7 @@ cd src
 
 echo "Running script"
 #run script @$ means pass arguments from bash script to python script
-python3 lr-mnist.py $@
+python lr-mnist.py $@
 
 echo "Deactivating and removing environment"
 #deactivate environment
