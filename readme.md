@@ -25,11 +25,11 @@ cd cv101_assignment_4
 **Step 3: Run bash scripts**  
 - Run the bash script run_nn-mnist.sh or run_lr-mnist.sh to set up environment and run the classifiers.  
 
-_Logistic regression classifier:_  
+_Neural network:_
 ```console
 bash run_nn-mnist.sh
 ```    
-_Neural network:_  
+_Logistic regression classifier:_  
 ```console
 bash run_lr-mnist.sh
 ```
