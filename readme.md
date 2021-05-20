@@ -73,5 +73,5 @@ bash run_nn-mnist.sh --test_size 0.25 --epochs 100 --hidden_layers 10 5
 ```
 _Without bash script:_  
 ```console
-python run_nn-mnist.sh --test_size 0.25 --epochs 100 --hidden_layers 10 5
+python run_nn-mnist.py --test_size 0.25 --epochs 100 --hidden_layers 10 5
 ```
