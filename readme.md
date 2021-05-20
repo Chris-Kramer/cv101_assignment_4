@@ -47,7 +47,9 @@ Both scripts take parameters, they have already been supplied with default value
 ### run_lr-mnist.sh / lr-mnist.py
 - `--test_size` The size of the test data as a float percentage. The training size will be adjusted automatically.  
     - DEFAULT = 0.2  
+
 Example:  
+
 _With bash script:_  
 ```console
 bash run_lr-mnist.sh --test_size 0.25
