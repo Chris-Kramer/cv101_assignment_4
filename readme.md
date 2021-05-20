@@ -7,8 +7,7 @@ You'll use your new knowledge and skills to create two command-line tools which 
 You should create two Python scripts. One takes the full MNIST data set, trains a Logistic Regression Classifier, and prints the evaluation metrics to the terminal. The other should take the full MNIST dataset, train a neural network classifier, and print the evaluation metrics to the terminal.  
 
 ## Methods  
-These scripts use two different machine learning algorithms to classify handwritten numbers from the MNIST data set. The logistic regression classifier re-scales features from a value between 0-255 to a value between 0 and 1, and the saga solver (Stochastic Average Gradient Descent). 
-The second model is a relatively simple NumPy feedforward neural network, which was created by Ross for this class. It uses sigmoid as its activation function and backpropagation to adjust weights. As is the case with the logistic regression classifier, this model rescales all features to a value between 0 and 1.  
+These scripts a logistic regression and a relatively simple NumPy feedforward neural network, which was created by my instructor, Ross, for this class.  
 
 ## How to run  
 This should work on both Linux, Mac, and Windows. However, If you are running on a local windows machine, you should run it from a bash emulator such as git bash.  
@@ -74,5 +73,3 @@ _Without bash script:_
 ```console
 python run_nn-mnist.sh --test_size 0.25 --epochs 100 --hidden_layers 10 5
 ```
-## Discussion  
-Both classifiers perform well with the default parameters. The logistic regression has a weighted average of 93%, while the neural network has a weighted average of 96%. However, the neural network is substantially slower than the logistic regression, which probably isn’t worth the 3% performance increase. This can be solved by using a neural network library, such as Keras and TensorFlow.
